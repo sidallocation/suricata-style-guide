@@ -1,4 +1,4 @@
-# Suricata community style guide
+# Suricata Community Style Guide
 
 A collaborative document to collect style guidelines from the community of rule writers
 
@@ -161,8 +161,8 @@ A collaborative document to collect style guidelines from the community of rule 
 
 * `http.response_body;` in Suricata 5.0 performs significantly worse than `file.data;` despite `file.data;` applying to many protocols (such as SMB)
 * Use `base64_*` keywords sparingly, their performance can be less than ideal
-* Do not apply `fast_pattern` to content in a `base64_data` buffer, it's often better to search the encoded string with various offsets (using a script such as this from Darien Huss - [https://github.com/darienhuss/base_to_content](https://github.com/darienhuss/base_to_content)) than it is to fast_pattern the raw string after base64 decoding.
-* `Tls.fingerprint` in Suricata 4 appears to be bugged and causes drastic performance degradation for unknown reasons (the worst performing ET rule currently uses this buffer and is significantly worse than anything else).
+* Do not apply `fast_pattern` to content in a `base64_data` buffer, it's often better to search the encoded string with various offsets (using a script such as [this](https://github.com/darienhuss/base_to_content) from Darien Huss) than it is to fast_pattern the raw string after base64 decoding.
+* `tls.fingerprint` in Suricata 4 appears to be bugged and causes drastic performance degradation for unknown reasons (the worst performing ET rule currently uses this buffer and is significantly worse than anything else).
 * `Urilen` is currently much faster than applying bsize to the http.uri keyword. 
 
 
