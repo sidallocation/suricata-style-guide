@@ -12,8 +12,8 @@ A collaborative document to collect style guidelines from the community of rule 
     * No bidirectional rules, bidirectional rules can produce unexpected results. It is better to use 2 rules
       * Example: `$EXTERNAL_NET any -> any any` and `$HOME_NET any -> any any`  **not** `alert http any any <-> any any`
     * Avoid using `any any -> any any`, it's better to create multiple rules if we expect multi direction, specifically stating INBOUND or OUTBOUND depending on the direction of the rule. 
-* Avoid using `packet_data;` if possible
-    * `packet_data;`resets the inspection pointer, resulting in confiusing and disjointed logic
+* Avoid using `pkt_data;` if possible
+    * `pkt_data;`resets the inspection pointer, resulting in confiusing and disjointed logic
 * Avoid creating `byte_test;` only rules, they perform very badly
 * Avoid creating rules without `content:` keywords, they also perform poorly
 * Avoid using the `priority` keyword
