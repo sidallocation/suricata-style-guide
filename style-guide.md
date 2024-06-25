@@ -169,9 +169,22 @@ A collaborative document to collect style guidelines from the community of rule 
 
 ### Emerging Threats specific
 
-Metadata fields that are sacrosanct and within our purview are always populated:
-
-* attack target
-* Severity
-* Impact
-* deployment
+ET metadata fields (as defined [here](https://community.emergingthreats.net/t/signature-metadata/96) [*](https://gist.github.com/travisbgreen/c63d57282625b0e36e9beb709f4bf057)):
+* Attack Target (always populated)
+* Signature Deployment (always populated)
+* Signature Severity (always populated)
+* Performance Impact
+* Affected Products
+* Confidence
+* Deprecation Reason
+* Malware Families
+* Target
+* Create Date (always populated)
+* Update Date (always populated)
+* Tags
+* MITRE Tags
+   * MITRE Tactic ID
+   * MITRE Tactic Name
+   * MITRE Technique ID
+   * MITRE Technique Name
+* tls_state
