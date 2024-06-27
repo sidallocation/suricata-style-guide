@@ -80,7 +80,7 @@ A collaborative document to collect style guidelines from the community of rule 
 
 * Msg format is: `RULESET CATEGORY malware/product/protocol NAME [verbs] [date]`
     * For malware include the architecture/OS/platform in the signature message (ex. `Win32/malfamily`, `Win64/malfamily`, `ELF/malfamily`, `OSX/malfamily`, `PS/malfamily`)
-* Avoid using the words `possible` and `unknown`, it's OK to make stuff up if need be
+* Avoid using the words `possible` and `unknown` for NAME, it's OK to invent new malware name if you have exhausted other options
 * Do not list author/team, use `metadata` instead
 * Dates are [ISO format](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates) 
     * Example: `2017-11-03`
@@ -96,8 +96,6 @@ A collaborative document to collect style guidelines from the community of rule 
     * Use when detecting several behaviors of the same malware
     * Example: `Yowza Ransomware CnC Checkin M1`, `Yowza Ransomware CnC Checkin M2`
     * If there's another similar rule with no number already, give it a number
-* Avoid Unicode graphemes, ASCII only. Unicode graphemes break import to srcfire
-
 
 
 ### Flow, flowbits, xbits
